@@ -14,7 +14,7 @@ import es.api.atw.model.User;
 import es.api.atw.repository.UserRepository;
 
 @Repository
-public class UserMysql implements UserRepository {
+public class UserPostgres implements UserRepository {
 
 	private final SessionFactory sessionFactory = HibernateConfiguration.init();
 

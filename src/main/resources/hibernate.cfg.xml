@@ -5,12 +5,11 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/atw-db</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password"></property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">zxpberjkbugnlm</property>
+        <property name="hibernate.connection.password">ab1a55762c5a79e77ad0ed14d24de5627e7b1f4760d03b10ba906b9110448cc5</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-247-125-38.eu-west-1.compute.amazonaws.com:5432/dav2fot36jdd0c</property>
         
         <mapping class="es.api.atw.model.User" />
     </session-factory>
