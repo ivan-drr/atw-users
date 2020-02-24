@@ -15,7 +15,7 @@ import es.api.atw.model.User;
 import es.api.atw.service.UserService;
 import javassist.NotFoundException;
 
-@RestController()
+@RestController
 public class UserController {
 
 	private final UserService userService;
