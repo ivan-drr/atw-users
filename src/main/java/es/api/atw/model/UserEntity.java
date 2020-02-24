@@ -19,8 +19,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity
-@Table(name = "User")
-public class User {
+@Table(name = "user_entity")
+public class UserEntity {
 
 	@Id
 	@Column(name = "USR_ID")

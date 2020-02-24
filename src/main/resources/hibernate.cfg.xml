@@ -11,6 +11,6 @@
         <property name="hibernate.connection.password">ab1a55762c5a79e77ad0ed14d24de5627e7b1f4760d03b10ba906b9110448cc5</property>
         <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-247-125-38.eu-west-1.compute.amazonaws.com:5432/dav2fot36jdd0c</property>
         
-        <mapping class="es.api.atw.model.User" />
+        <mapping class="es.api.atw.model.UserEntity" />
     </session-factory>
 </hibernate-configuration>

@@ -5,7 +5,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import es.api.atw.model.User;
+import es.api.atw.model.UserEntity;
 
 public class HibernateConfiguration {
 
@@ -15,7 +15,7 @@ public class HibernateConfiguration {
 	public static SessionFactory init() {
 		final Configuration config = new Configuration();
 		config.configure();
-		config.addAnnotatedClass(User.class);
+		config.addAnnotatedClass(UserEntity.class);
 
 		HibernateConfiguration.serviceRegistry = new StandardServiceRegistryBuilder()
 				.applySettings(config.getProperties()).build();

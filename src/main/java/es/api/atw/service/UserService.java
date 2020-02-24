@@ -1,20 +1,23 @@
 package es.api.atw.service;
 
 import java.util.List;
+import java.util.Map;
 
-import es.api.atw.model.User;
-import javassist.NotFoundException;
+import org.springframework.http.ResponseEntity;
+
+import es.api.atw.exceptions.ResourceNotFoundException;
+import es.api.atw.model.UserEntity;
 
 public interface UserService {
 
-	boolean createUser(User user);
+	UserEntity createUser(UserEntity user);
 
-	boolean editUser(User user);
+	ResponseEntity<UserEntity> editUser(UserEntity user) throws ResourceNotFoundException;
 
-	User getUserById(int id) throws NotFoundException;
+	ResponseEntity<UserEntity> getUserById(int id) throws ResourceNotFoundException;
 
-	void deleteUserById(int id);
+	Map<String, Boolean> deleteUserById(int id) throws ResourceNotFoundException;
 
-	List<User> getAllUsers();
+	List<UserEntity> getAllUsers();
 
 }
