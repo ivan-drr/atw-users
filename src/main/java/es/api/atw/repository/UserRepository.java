@@ -1,19 +1,9 @@
 package es.api.atw.repository;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import es.api.atw.model.User;
 
-public interface UserRepository {
-
-	boolean createUser(User user);
-
-	boolean editUser(User user);
-
-	User getUserById(int id);
-
-	boolean deleteUserById(int id);
-
-	List<User> getAllUsers();
-
-}
+@Repository
+public interface UserRepository extends CrudRepository<User, Integer> {}

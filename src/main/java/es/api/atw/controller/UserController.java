@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import es.api.atw.model.User;
 import es.api.atw.service.UserService;
+import javassist.NotFoundException;
 
 @RestController()
 public class UserController {
@@ -30,7 +31,7 @@ public class UserController {
 	}
 
 	@GetMapping("/{id}")
-	public User getUserById(@PathVariable("id") int id) {
+	public User getUserById(@PathVariable("id") int id) throws NotFoundException {
 		return this.userService.getUserById(id);
 	}
 
@@ -45,8 +46,8 @@ public class UserController {
 	}
 
 	@DeleteMapping("/delete/{id}")
-	public boolean deleteUserById(@PathVariable("id") int id) {
-		return this.userService.deleteUserById(id);
+	public void deleteUserById(@PathVariable("id") int id) {
+		this.userService.deleteUserById(id);
 	}
 
 }
