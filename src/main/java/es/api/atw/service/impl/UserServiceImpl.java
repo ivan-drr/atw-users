@@ -38,7 +38,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public ResponseEntity<UserEntity> getUserById(@PathVariable(value = "id") int userId) throws ResourceNotFoundException {
+	public ResponseEntity<UserEntity> getUserById(@PathVariable(value = "id") int userId)
+			throws ResourceNotFoundException {
 		final UserEntity user = this.userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("User not found for this id :: " + userId));
 		return ResponseEntity.ok().body(user);
@@ -73,6 +74,13 @@ public class UserServiceImpl implements UserService {
 		final Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return response;
+	}
+
+	@Override
+	public ResponseEntity<UserEntity> getUserByNickname(String nickname) throws ResourceNotFoundException {
+		final UserEntity user = this.userRepository.findByNickname(nickname)
+				.orElseThrow(() -> new ResourceNotFoundException("User not found for this nickname :: " + nickname));
+		return ResponseEntity.ok().body(user);
 	}
 
 }

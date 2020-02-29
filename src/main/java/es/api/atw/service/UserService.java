@@ -20,4 +20,6 @@ public interface UserService {
 
 	List<UserEntity> getAllUsers();
 
+	ResponseEntity<UserEntity> getUserByNickname(String nickname) throws ResourceNotFoundException;
+
 }

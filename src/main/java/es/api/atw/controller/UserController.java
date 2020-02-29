@@ -37,6 +37,12 @@ public class UserController {
 		return this.userService.getUserById(id);
 	}
 
+	@GetMapping("/nick/{nickname}")
+	public ResponseEntity<UserEntity> getUserByNickname(@PathVariable("nickname") String nickname)
+			throws ResourceNotFoundException {
+		return this.userService.getUserByNickname(nickname);
+	}
+
 	@PostMapping("/create")
 	public UserEntity getUserById(@RequestBody UserEntity user) {
 		return this.userService.createUser(user);
