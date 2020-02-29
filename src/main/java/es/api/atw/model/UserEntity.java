@@ -30,7 +30,7 @@ public class UserEntity {
 	@Column(name = "USR_PWD")
 	private String password;
 
-	@Column(name = "USR_NCK")
+	@Column(name = "USR_NCK", unique = true)
 	private String nickname;
 
 	@Column(name = "USR_NAM")
