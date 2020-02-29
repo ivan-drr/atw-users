@@ -41,8 +41,8 @@ public class UserEntity {
 
 	@Override
 	public String toString() {
-		return "{id: " + this.id + ", password: " + this.password + ", nickname: " + this.nickname + ", name: "
-				+ this.name + ", birthYear: " + this.birthYear + "}";
+		return "{'id': " + this.id + ", 'password': " + this.password + ", 'nickname': " + this.nickname + ", 'name': "
+				+ this.name + ", 'birthYear': " + this.birthYear + "}";
 	}
 
 }
